@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_container_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/fragment_user_info_scheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scheme"
+        android:textAllCaps="true"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_user_info_scheme_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_scheme" />
+
+    <TextView
+        android:id="@+id/fragment_user_info_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:text="@string/brand"
+        android:textAllCaps="true"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_scheme_meaning" />
+
+    <TextView
+        android:id="@+id/fragment_user_info_brand_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_brand" />
+
+    <TextView
+        android:id="@+id/fragment_user_info_card_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_number"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_brand_meaning"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/length"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_card_number"
+        android:layout_marginTop="@dimen/small_spacing"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_length_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_length" />
+
+    <TextView
+        android:id="@+id/fragment_user_info_luhn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/luhn"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/fragment_user_info_scheme"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_card_number"
+        android:layout_marginTop="@dimen/small_spacing"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_luhn_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/fragment_user_info_luhn"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_luhn" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/vertical_barrier_first"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="fragment_user_info_luhn" />
+
+    <Space
+        android:id="@+id/space_first"
+        android:layout_width="@dimen/common_spacing"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_barrier_first" />
+
+    <TextView
+        android:id="@+id/fragment_user_info_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/type"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_first"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_type_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_first"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_type" />
+
+    <TextView
+        android:id="@+id/fragment_user_info_prepaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prepaid"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_first"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_type_meaning"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_prepaid_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_first"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_prepaid" />
+
+    <TextView
+        android:id="@+id/fragment_user_info_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/country"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_first"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_prepaid_meaning"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_country_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_first"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_country"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/latitude"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_first"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_country_meaning"
+        android:layout_marginTop="@dimen/small_spacing"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_latitude_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/fragment_user_info_latitude"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_country_meaning"
+        android:layout_marginTop="@dimen/small_spacing"
+        android:layout_marginStart="@dimen/small_spacing"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longitude"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/fragment_user_info_latitude_meaning"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_country_meaning"
+        android:layout_marginTop="@dimen/small_spacing"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_longitude_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/fragment_user_info_longitude"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_country_meaning"
+        android:layout_marginTop="@dimen/small_spacing"
+        android:layout_marginStart="@dimen/small_spacing"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_longitude_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longitude_end"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/fragment_user_info_longitude_meaning"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_country_meaning"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/vertical_barrier_second"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="fragment_user_info_longitude_end" />
+
+    <Space
+        android:id="@+id/space_second"
+        android:layout_width="@dimen/common_spacing"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_barrier_second" />
+
+    <TextView
+        android:id="@+id/fragment_user_info_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bank"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_second"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_bank_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_second"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_bank" />
+
+    <TextView
+        android:id="@+id/fragment_user_info_bank_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_second"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_bank_meaning"/>
+
+    <TextView
+        android:id="@+id/fragment_user_info_bank_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@id/space_second"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_info_bank_url"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
